@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()"> <!--Встановлення обробника події для подання форми, який буде відкриватися при її відправці-->
+    <label for="email">Email:</label> <!--Мітка для поля введення email-->
+    <input type="email" id="email" name="email" required [(ngModel)]="email"> <!--Поле введення email з обов'язковим заповнення і зв'язок зі змінною email за допомогою директиви ngModel-->
+    <label for="identificationCode">Пароль:</label> <!--Мітка для поля введення паролю-->
+    <input type="text" id="identificationCode" name="identificationCode" required [(ngModel)]="identificationCode"><!--Поле введення паролю з обов'язковим заповнення і зв'язок зі змінною identificationCode за допомогою директиви ngModel-->
+    <button type="submit">Вхід</button> <!-- Кнопка для відправлення форми -->
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div> <!-- Відображення повідомлення про помилку -->
+</form>
+
