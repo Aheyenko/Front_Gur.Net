@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header.component';
-import { LoginFormComponent } from './login-form.component';
+import { HeaderComponent } from './header/header.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
-  declarations: [//Визначення списку декларацій
+  declarations: [
     AppComponent,
     HeaderComponent,
     LoginFormComponent
   ],
-  imports: [//Визначення списку імпортів
- 
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
   ],
-  providers: [//Визначення списку провайдерів
-  
-  ],
-  bootstrap: [AppComponent]//Визначення кореневого компонента додатка
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }//Експортування класу AppModule для можливості імпортування його в інші частини додатка
+export class AppModule { }

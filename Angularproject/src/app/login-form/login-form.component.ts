@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent {
-  email: string = ''; // змінна для зберігання email
-  identificationCode: string = ''; // змінна для зберігання ідентифікаційного коду
+  identificationCode: string = '';
+  email: string = '';
   errorMessage: string = ''; // змінна для відображення помилок
 
   constructor() { }
@@ -20,3 +20,4 @@ export class LoginFormComponent {
     }
   }
 }
+
