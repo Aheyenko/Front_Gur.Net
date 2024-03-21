@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -10,7 +11,7 @@ export class LoginFormComponent {
   email: string = '';
   errorMessage: string = ''; // змінна для відображення помилок
 
-  constructor() { }
+  constructor(private authService: AuthService) { } // Впровадження AuthService в компонент
 
   onSubmit(): void {
     // Виконуємо перевірку введених даних перед відправкою на сервер
@@ -20,4 +21,5 @@ export class LoginFormComponent {
     }
   }
 }
+
 
