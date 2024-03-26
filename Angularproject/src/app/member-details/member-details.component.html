@@ -1,1 +1,6 @@
-<p>member-details works!</p>
+<h1>User Info:</h1>
+<div *ngIf="user">
+    <h2>Username: {{user.userName}}</h2>
+    <h2>Firstname: {{user.firstName}}</h2>
+    <h2>middleName: {{user.middleName}}</h2>
+</div>
