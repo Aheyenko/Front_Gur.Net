@@ -1,37 +1,59 @@
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #4cbcec, #cdd9ff, #ffff);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    align-self: center;
+}
+
 form {
-    width: 95%;/*Встановлення ширини форми*/
-    max-width: 400px;/*Встановлення максимальної ширини форми*/
-    padding: 20px;/*Встановлення внутрішніх відступів*/
-    margin-left: auto; /*Вирівнювання по лівому краю*/
-    margin-right: auto; /*Вирівнювання по правому краю*/
+    width: 95%;
+    max-width: 400px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 label {
-    display: block;/*Встановлення блочного відображення*/
-    font-size: 1.2em;/*Встановлення розміру шрифта*/
-    margin-bottom: 5px;/*встановлення зовнішнього відступу вниз*/
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
 input[type="email"],
 input[type="text"] {
-    width: 100%;/*Встановлення ширини*/
-    padding: 10px;/*Встановлення внутрішніх відступів*/
-    margin-bottom: 10px;/*Встановлення зовнішнього відступу вниз*/
-    border: 1px solid #ccc;/*Встановлення рамки*/
-    border-radius: 5px;/*Встановлення радіуса кутів*/
-    box-sizing: border-box;/*Встановлення відображення бордеру всередині елементу*/
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button[type="submit"] {
-    width: 100%;/*Встановлення ширини*/
-    padding: 10px;/*Встановлення внутрішніх відступів*/
-    background-color: #4cbcec;/*Встановлення кольорру фону*/
-    color: #fff;/*Встановлення кольору тексту*/
-    border: none;/*Встановлення рамки*/
-    border-radius: 5px;/*Встановлення радіуса кутів*/
-    cursor: pointer;/*Встановлення курсору*/
+    width: 100%;
+    padding: 10px;
+    background-color: #4cbcec;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button[type="submit"]:hover {
-    background-color: #00b3ff;/*Встановлення кольору фону при наведенні курсору*/
+    background-color: #00b3ff;
 }
