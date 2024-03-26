@@ -5,7 +5,7 @@ import { MemberDetailsComponent } from './member-details/member-details.componen
 
 const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
-  { path: 'member-details', component: MemberDetailsComponent },
+  { path: 'member-details/:id', component: MemberDetailsComponent },
 ];
 
 @NgModule({
