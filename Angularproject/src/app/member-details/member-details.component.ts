@@ -39,9 +39,9 @@ export class MemberDetailsComponent implements OnInit {
   private generateUserFakeData() {
     let user: User = {
      id:"userId",
-     firstName: "Mike",  
-     userName: "Wazovski",  
-     middleName: "Vitaliovich",  
+     firstName: "Шрекенко",  
+     userName: "Шрек",  
+     middleName: "Шрекович",  
     };
 
     return user;

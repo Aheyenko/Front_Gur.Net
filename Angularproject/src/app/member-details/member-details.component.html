@@ -1,6 +1,30 @@
-<h1>User Info:</h1>
-<div *ngIf="user">
-    <h2>Username: {{user.userName}}</h2>
-    <h2>Firstname: {{user.firstName}}</h2>
-    <h2>middleName: {{user.middleName}}</h2>
+<div class="info_about_user">
+    <img src="assets/3F3F 1.png" class="shrek">
+    <div class="h1"><h1>Ви увійшли як:</h1></div>
+    <div *ngIf="user" class="user_info">
+        <h2>{{user.userName}}</h2>
+        <h2>{{user.firstName}}</h2>
+        <h2>{{user.middleName}}</h2>
+    </div>
+    <div class="h3"><h3>Персональні дані:</h3></div>
+   <div class="detail_info"><p>Гуртожиток №14, вулиця Академіка Лазаренка, 40,<br>
+     Львів, Львівська область, 79007<br>
+    Кімната №535<br><br>
+    
+    Студентська перепустка КВ 18057986<br>
+    Дійсна до 24.08.2024 р.<br><br>
+    
+    Моб. телефон: +38054554651<br>
+    Email: shrek.shrekenko.pm.2022&#64;lpnu.ua<br><br>
+    
+    Інститут: ІМФН<br>
+    Група: ПМ<br><br>
+    
+    
+    Останній платіж за житло: 24.01.24 р.<br>
+    Платіж дійсний до: 24.08.24 р.<br> </p>
+</div>
+    </div>
+<div clas="left_side_bar">
+    <img src="assets/logo.png" class="logo">
 </div>
