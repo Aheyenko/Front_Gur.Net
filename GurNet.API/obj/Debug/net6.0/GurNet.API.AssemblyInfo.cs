@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GurNet.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1bf0e66c8695e00ad16468c4681f9bd04d99881")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41e3a0d06a5fa42a7ce135fa751b949a88bc4c9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GurNet.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GurNet.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../_services/users.service';
 import { User } from '../models/user';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-details',
@@ -13,12 +13,14 @@ export class MemberDetailsComponent implements OnInit {
   user: User | null = null;
   userId: string = "";
 
-  constructor(private usersService: UsersService, private route: ActivatedRoute) {
+  constructor(private usersService: UsersService, private route: ActivatedRoute, private router: Router) {
     this.userId = this.route.snapshot.paramMap.get('id')!;
     console.log(this.userId);
   }
   
-
+ 
+   
+  
   ngOnInit(): void {
     this.user = this.generateUserFakeData();
     // this.getUserById();
@@ -46,4 +48,19 @@ export class MemberDetailsComponent implements OnInit {
 
     return user;
   }
+
+
+  submitApplication():void{
+    this.router.navigate(['/submit-application']);
+  }
+  
+
+makePayment(): void{
+  this.router.navigate(['/payment']);
+}
+
+goToConfirmation(): void{
+  this.router.navigate(['/confirmation']);
+}
+
 }

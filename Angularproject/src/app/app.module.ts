@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { MemberDetailsComponent } from './member-details/member-details.component';
 import { RouterModule } from '@angular/router';
+import { PaymentComponent } from './payment/payment.component';
+import { QrPageComponent } from './qr-page/qr-page.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    MemberDetailsComponent
+    MemberDetailsComponent,
+    PaymentComponent,
+    QrPageComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

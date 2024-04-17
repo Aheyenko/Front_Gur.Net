@@ -29,13 +29,21 @@
     </div>
     <div class="right_side_bar">
         <img src="assets/logo.png" class="logo">
-        <img src="assets/setting_icon.png" class="setting_icon">
-        <div class="setting_wr">Налаштування</div>
-        <img src="assets/sheets.png" class="sheets">
-        <div class="sheets_wr">Подати заявку</div>
-        <img src="assets/wallet.png" class="wallet">
-        <div class="wallet_wr">Оплата</div>
-        <img src="assets/qr_icon.png" class="qr">
-      
+
+        <button class="exit"  (click)="goToConfirmation()"> 
+            <img src="assets/exit.png" class="exit_">
+        </button>
+        <button class="button" (click)="submitApplication()">
+            <img src="assets/sheets.png" class="sheets">
+            <div class="sheets_wr">Подати заявку</div>
+        </button>
+
+        <button class="button" (click)="makePayment()">
+            <img src="assets/wallet.png" class="wallet">
+            <div class="wallet_wr">Оплата</div>
+        </button>
+        
+            <img src="assets/qr_icon.png" class="qr">
+       
     </div>
 </div>

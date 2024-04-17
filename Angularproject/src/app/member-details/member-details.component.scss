@@ -66,6 +66,7 @@
 }
 
 .right_side_bar {
+    position: relative;
     height: 100vh;
     width: 30%;
     padding: 0;
@@ -74,67 +75,100 @@
     flex-direction: column;
     background: linear-gradient(to bottom, #ffff, #cdd9ff, #85c5ff);
     overflow: hidden;
-    flex-shrink: 0; /* Prevent from shrinking */
+    justify-content: center;
+    flex-shrink: 0; 
 }
 .logo {
-    width: 25%;
+    width: 65%;
     height: 15%;
     position: absolute; 
-    right: 3%;
-    top: 3%;
+    left: 25%;
+    top: 5%;
 }
-.setting_icon{
-    height: 8%;
-    width: 5%;
-    position: absolute; 
-    right: 24%;
-    top:17%;
-}
-.sheets{
-    height: 8%;
-    width: 5%;
-    position: absolute; 
-    right: 24%;
-    top:33%;
-}
-.wallet{
-    height: 8%;
-    width: 5%;
-    position: absolute; 
-    right: 24%;
-    top:50%;
-}
-.setting_wr{
-    font-family: Arial, sans-serif;
-    font-size: 27px;
-    font-weight: bold;
-    color: #837e83;
-    position: absolute;
-    right: 10%;
-    top: 19%;
-}
-.sheets_wr{
-    font-family: Arial, sans-serif;
-    font-size: 27px;
-    font-weight: bold;
-    color: #837e83;
-    position: absolute;
-    right: 10%;
-    top: 36%;
-}
-.wallet_wr{
-    font-family: Arial, sans-serif;
-    font-size: 27px;
-    font-weight: bold;
-    color: #837e83;
-    position: absolute;
-    right: 16%;
-    top: 53%;
-}
+
 .qr{
-    width: 15%;
+    width: 50%;
     height: 25%;
     position: absolute; 
-    right: 7%;
-    bottom: 0%;
+    right: 23%;
+    bottom: 8%;
+}
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 5% 5%;
+    background-color: transparent; 
+    color:#837e83; 
+    border: none;
+    border-radius: 3%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    width: 60%;
+    margin-top: -30%;
+    margin-left: 23%;
+    text-align: center;
+}
+.button + .button {
+    margin-top: 15%; 
+}
+
+.button:hover {
+    background-color:rgba(89, 169, 254, 0.3); 
+}
+
+.button img {
+    width: 20%; 
+    height: 60%; 
+    margin-right: 0; 
+    position: absolute; 
+    left: 3%; 
+    bottom:20%; 
+}
+
+.button .sheets_wr,
+.button .wallet_wr {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 25px
+}
+
+.sheets_wr,
+.wallet_wr {
+    margin: 0;
+    padding-left: 25px; 
+    font-size: 25px
+}
+
+.exit {
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 5%;
+    width: 5%;
+    border-radius: 3%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.exit img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+
+}
+
+exit_ {
+width: 100%;
+height: 100;
+}
+
+.exit:hover {
+    background-color:rgba(89, 169, 254, 0.3); 
 }

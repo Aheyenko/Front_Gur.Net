@@ -1,27 +1,23 @@
 ﻿using GurNet.API.models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using System;
-
 
 namespace GurNet.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegistrationController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public RegistrationController(IConfiguration configuration)
+        public LoginController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
         [HttpPost]
-        [Route("registration")]
-        public IActionResult Registration(Registration registration)
+        [Route("login")]
+        public IActionResult Login(Login login)
         {
             try
             {
@@ -33,10 +29,10 @@ namespace GurNet.API.Controllers
                     con.Open();
 
                     // Перевірка, чи існує користувач з введеним іменем і паролем
-                    string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
+                    string query = "SELECT COUNT(*) FROM dbo.[User] WHERE user_email = @Email AND Password = @Password";
                     SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Email", registration.Email);
-                    cmd.Parameters.AddWithValue("@Password", registration.Password);
+                    cmd.Parameters.AddWithValue("@Email", login.Email);
+                    cmd.Parameters.AddWithValue("@Password", login.Password);
 
                     int count = (int)cmd.ExecuteScalar();
 
@@ -56,4 +52,7 @@ namespace GurNet.API.Controllers
             }
         }
     }
+    
 }
+
+

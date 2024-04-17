@@ -1,27 +1,51 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\GurNet.API\\wwwroot\\assets\\logo.png",
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets\\3rdpartylicenses.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\assets\\3F3F 1.png",
+      "PackagePath": "staticwebassets\\assets\\3F3F 1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\assets\\logo.png",
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\GurNet.API\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\assets\\qr_icon.png",
+      "PackagePath": "staticwebassets\\assets\\qr_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\assets\\setting_icon.png",
+      "PackagePath": "staticwebassets\\assets\\setting_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\assets\\sheets.png",
+      "PackagePath": "staticwebassets\\assets\\sheets.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\assets\\wallet.png",
+      "PackagePath": "staticwebassets\\assets\\wallet.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\GurNet.API\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\GurNet.API\\wwwroot\\main-LIQIHQP3.js",
-      "PackagePath": "staticwebassets\\main-LIQIHQP3.js"
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\main-Q7TQDG6I.js",
+      "PackagePath": "staticwebassets\\main-Q7TQDG6I.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\GurNet.API\\wwwroot\\polyfills-RT5I6R6G.js",
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\polyfills-RT5I6R6G.js",
       "PackagePath": "staticwebassets\\polyfills-RT5I6R6G.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\GurNet.API\\wwwroot\\styles-5INURTSO.css",
+      "Id": "C:\\Users\\Admin\\Desktop\\project\\GurNet.API\\Sho-to-tam\\GurNet.API\\wwwroot\\styles-5INURTSO.css",
       "PackagePath": "staticwebassets\\styles-5INURTSO.css"
     },
     {
