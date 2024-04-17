@@ -16,7 +16,6 @@ namespace GurNet.API.Controllers
         }
 
         [HttpPost]
-        [Route("login")]
         public IActionResult Login(Login login)
         {
             try

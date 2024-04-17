@@ -7,7 +7,7 @@
         <input type="email" id="email" name="email" required [(ngModel)]="email">
         <label for="identificationCode">Пароль:</label>
         <input type="password" id="identificationCode" name="identificationCode" required [(ngModel)]="identificationCode">
-        <button type="submit" routerLink="/member-details/dsfsd">Вхід</button>
+        <button type="submit">Вхід</button>
         <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
     </form>
 </div>
