@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using QRCoder;
+using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GurNet.API.Models;
+using static System.Net.Mime.MediaTypeNames;
+using GurNet.API.models;
 
 namespace GurNet.API.Controllers
 {
@@ -35,10 +36,10 @@ namespace GurNet.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-          if (_context.Students == null)
-          {
-              return NotFound();
-          }
+            if (_context.Students == null)
+            {
+                return NotFound();
+            }
             var student = await _context.Students.FindAsync(id);
 
             if (student == null)
@@ -119,5 +120,35 @@ namespace GurNet.API.Controllers
         {
             return (_context.Students?.Any(e => e.student_id == id)).GetValueOrDefault();
         }
+        [HttpGet("qrcode/{id}")]
+        // QrCodeGenerator by StudentUserName
+        public async Task<IActionResult> GetStudentQRCode(int id) {
+            if (_context.Students == null)
+            {
+                return NotFound();
+            }
+            var student = await _context.Students.FindAsync(id);
+            if (student == null) {
+                return NotFound();
+            }
+            byte[] QR = new byte[0];
+            if (!string.IsNullOrEmpty(student.identification_code))
+            {
+                QRCodeGenerator codeGenerator = new QRCodeGenerator();
+                QRCodeData data = codeGenerator.CreateQrCode(student.identification_code, QRCodeGenerator.ECCLevel.Q);
+                BitmapByteQRCode bitmap = new BitmapByteQRCode(data);
+                QR = bitmap.GetGraphic(20);
+            }
+
+            return File(QR, "image/png", "QRCode.png");
+
+        }
+        //[HttpGet("usfind")]
+        //public async Task<Student> GetStudentByUserIdAsync(int userId)
+        //{
+        //    return _context.Students
+        //        .Include(s => s.first_name)
+        //        .Where(s => s.user. == userId);
+        //}
     }
 }

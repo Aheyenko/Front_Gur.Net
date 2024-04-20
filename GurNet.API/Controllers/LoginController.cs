@@ -1,6 +1,8 @@
 ﻿using GurNet.API.models;
+using GurNet.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace GurNet.API.Controllers
 {
@@ -8,48 +10,28 @@ namespace GurNet.API.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
-
-        public LoginController(IConfiguration configuration)
+        private readonly UserContext _context;
+        public LoginController(UserContext context)
         {
-            _configuration = configuration;
+            _context = context;
         }
 
         [HttpPost]
-        public IActionResult Login(Login login)
+        public async Task<ActionResult<IEnumerable<User>>> Login(Login login)
         {
-            try
+            var user = await _context.User.FirstAsync(u => u.user_email == login.Email, CancellationToken.None);
+            if (user == null)
             {
-                string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-                // Виконання перевірки з базою даних
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-
-                    // Перевірка, чи існує користувач з введеним іменем і паролем
-                    string query = "SELECT COUNT(*) FROM dbo.[User] WHERE user_email = @Email AND Password = @Password";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Email", login.Email);
-                    cmd.Parameters.AddWithValue("@Password", login.Password);
-
-                    int count = (int)cmd.ExecuteScalar();
-
-                    if (count > 0)
-                    {
-                        return Ok("Успішний вхід"); // Вхід успішний
-                    }
-                    else
-                    {
-                        return BadRequest("Невірний логін або пароль"); // Невірний логін або пароль
-                    }
-                }
+                return NotFound();
             }
-            catch (Exception ex)
+            if (user.password == login.Password)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Помилка при вході: " + ex.Message);
+                return Ok("Успішний вхід"); // Вхід успішний
+            }
+            else
+            {
+                return BadRequest("Невірний логін або пароль"); // Невірний логін або пароль
             }
         }
     }
-    
 }

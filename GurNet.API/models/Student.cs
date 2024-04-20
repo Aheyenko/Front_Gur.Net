@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using GurNet.API.models;
 
 namespace GurNet.API.Models
 {
@@ -23,5 +24,6 @@ namespace GurNet.API.Models
 
         [Column(TypeName = "varchar(50)")]
         public string identification_code { get; set; } = " ";
+        public UserContext user { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using GurNet.API.models;
 using GurNet.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,6 +23,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Added by markevjich for StudentsController
 builder.Services.AddDbContext<StudentContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<UserContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
