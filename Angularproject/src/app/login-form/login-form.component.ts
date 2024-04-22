@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from "@angular/router"
 import { AuthService } from '../auth.service';
 import axios from 'axios';
-// import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-login-form',
@@ -17,7 +17,7 @@ export class LoginFormComponent {
   constructor(private authService: AuthService, private router: Router) { } // Впровадження AuthService в компонент
 
   onSubmit(): void {
-    axios.post('https://localhost:7268/api/login', {
+    axios.post('http://localhost:4200/', {
       email: this.email,
       password: this.identificationCode
     })
@@ -34,5 +34,4 @@ export class LoginFormComponent {
     }
   }
 }
-
 
