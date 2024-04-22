@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <div class="wrapper">
     <div class="header">
         <img src="assets/logo.png" class="logo">
@@ -6,7 +8,8 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required [(ngModel)]="email">
         <label for="identificationCode">Пароль:</label>
-        <input type="password" id="identificationCode" name="identificationCode" required [(ngModel)]="identificationCode">
+        <input type="password" id="identificationCode" name="identificationCode" required
+            [(ngModel)]="identificationCode">
         <button type="submit">Вхід</button>
         <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
     </form>
