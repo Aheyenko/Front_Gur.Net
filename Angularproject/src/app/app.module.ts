@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NewguestComponent } from './newguest/newguest.component';
+import { PrhComponent } from './prh/prh.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { NewguestComponent } from './newguest/newguest.component';
     HomeComponent,
     MenuComponent,
     NewgueatComponent,
-    NewguestComponent
+    NewguestComponent,
+    PrhComponent
   ],
   imports: [
     BrowserModule,
