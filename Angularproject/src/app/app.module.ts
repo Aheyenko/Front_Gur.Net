@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NewguestComponent } from './newguest/newguest.component';
 import { PrhComponent } from './prh/prh.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -33,9 +34,9 @@ import { PrhComponent } from './prh/prh.component';
     HeaderComponent,
     HomeComponent,
     MenuComponent,
-    NewgueatComponent,
     NewguestComponent,
-    PrhComponent
+    PrhComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
