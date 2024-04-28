@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-// import { Auth2Service } from '../services/auth2.service';
+import { Auth2Service } from '../services/auth2.service';
 import { LOCALE_ID, Inject} from '@angular/core';
 import { formatDate } from '@angular/common';
 
@@ -41,18 +41,18 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private router: Router,
-    // private auth2Service: Auth2Service,
+     private auth2Service: Auth2Service,
     @Inject(LOCALE_ID) private locale: string
   ) {}
 
   submitSearch() {
-    // this.auth2Service.search(this.searchForm.value).subscribe({
-    //   next: () => this.router.navigate(['prh']),
-    //   error: (err) => {
-    //     console.error(err);
-    //     this.errorMessage = 'Такого мешканця не знайдено!'; 
-    //   }
-    // });
+    this.auth2Service.search(this.searchForm.value).subscribe({
+      next: () => this.router.navigate(['prh']),
+     error: (err) => {
+         console.error(err);
+         this.errorMessage = 'Такого мешканця не знайдено!'; 
+      }
+     });
   }
 
   ngOnInit(): void {

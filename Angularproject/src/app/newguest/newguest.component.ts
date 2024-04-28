@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-// import { Auth3Service } from '../services/auth3.service';
+import { Auth3Service } from '../services/auth3.service';
 import { LOCALE_ID, Inject } from '@angular/core';
 import { formatDate } from '@angular/common';
 
@@ -38,14 +38,14 @@ export class NewguestComponent implements OnInit {
 
   constructor(
     private router: Router,
-    // private auth3Service: Auth3Service,
+   private auth3Service: Auth3Service,
     @Inject(LOCALE_ID) private locale: string
   ) {}
 
   submitGuest() {
-    // this.auth3Service.guest(this.guestForm.value).subscribe({
-    //   next: () => this.router.navigate(['newguest']),
-    // });
+     this.auth3Service.guest(this.guestForm.value).subscribe({
+       next: () => this.router.navigate(['newguest']),
+     });
   }
 
   ngOnInit(): void {
