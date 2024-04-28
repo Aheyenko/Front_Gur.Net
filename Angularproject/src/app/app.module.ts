@@ -12,6 +12,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { QrPageComponent } from './qr-page/qr-page.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DataComponent } from './data/data.component';
+import { GuestComponent } from './guest/guest.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DataComponent } from './data/data.component';
     PaymentComponent,
     QrPageComponent,
     ConfirmationComponent,
-    DataComponent
+    DataComponent,
+    GuestComponent
   ],
   imports: [
     BrowserModule,
