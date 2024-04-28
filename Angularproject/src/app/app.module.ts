@@ -15,6 +15,7 @@ import { DataComponent } from './data/data.component';
 import { GuestComponent } from './guest/guest.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     DataComponent,
     GuestComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
