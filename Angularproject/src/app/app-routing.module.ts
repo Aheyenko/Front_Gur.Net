@@ -5,9 +5,15 @@ import { MemberDetailsComponent } from './member-details/member-details.componen
 import { SubmitApplicationComponent } from './submit-application/submit-application.component';
 import { PaymentComponent } from './payment/payment.component';
 import { QrPageComponent } from './qr-page/qr-page.component';
-import { FormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
-
+import { HomeComponent } from './home/home.component';
+import { DataComponent } from './data/data.component';
+import { GuestComponent } from './guest/guest.component';
+import { PrhComponent } from './prh/prh.component';
+import { SearchComponent } from './search/search.component';
+import { NewguestComponent } from './newguest/newguest.component';
+import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent },
@@ -17,6 +23,12 @@ const routes: Routes = [
   {path: 'submit-application', component: SubmitApplicationComponent},
   {path: 'payment', component: PaymentComponent},
   {path: 'qr-page', component: QrPageComponent},
+  {path: "home", component: HomeComponent},
+  {path: "data", component: DataComponent},
+  {path: "guest", component: GuestComponent},
+  {path: "prh", component: PrhComponent},
+  {path: "search", component: SearchComponent},
+  {path: "newguest", component: NewguestComponent},
 ];
 
 @NgModule({
