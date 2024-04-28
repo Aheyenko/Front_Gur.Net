@@ -14,6 +14,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DataComponent } from './data/data.component';
 import { GuestComponent } from './guest/guest.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
     ConfirmationComponent,
     DataComponent,
     GuestComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
