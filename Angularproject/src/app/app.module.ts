@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { PaymentComponent } from './payment/payment.component';
 import { QrPageComponent } from './qr-page/qr-page.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { DataComponent } from './data/data.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     MemberDetailsComponent,
     PaymentComponent,
     QrPageComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
