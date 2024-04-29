@@ -8,7 +8,7 @@ import { formatDate } from '@angular/common';
 @Component({
   selector: 'app-newguest',
   templateUrl: './newguest.component.html',
-  styleUrls: ['./newguest.component.css']
+  styleUrls: ['./newguest.component.scss']
 })
 export class NewguestComponent implements OnInit {
   message2: string = formatDate(new Date(), 'dd.MM.y', this.locale);

@@ -4,7 +4,7 @@ import { formatDate } from '@angular/common';
 @Component({
   selector: 'app-guest',
   templateUrl: './guest.component.html',
-  styleUrls: ['./guest.component.css']
+  styleUrls: ['./guest.component.scss']
 })
 export class GuestComponent implements OnInit {
   message1: string = formatDate(new Date(), 'dd.MM.y', this.locale);

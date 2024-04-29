@@ -4,7 +4,7 @@ import { formatDate } from '@angular/common';
 @Component({
   selector: 'app-prh',
   templateUrl: './prh.component.html',
-  styleUrls: ['./prh.component.css']
+  styleUrls: ['./prh.component.scss']
 })
 export class PrhComponent implements OnInit{
   message4: string = formatDate(new Date(), 'dd.MM.y', this.locale);
