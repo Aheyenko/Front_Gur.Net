@@ -12,7 +12,25 @@
     capture=camera"
     style="display: none;"
   />
+</label><h1>Demo - Native camera in browsers</h1>
+
+<!-- The `label` is attached to the hidden file input -->
+<label for="cameraFileInput">
+  <span class="btn" (click)="openCamera()">Open camera</span>
+
+  <!-- The hidden file `input` for opening the native camera -->
+  <input
+    id="cameraFileInput"
+    type="file"
+    accept="image/*;
+    capture=camera"
+    style="display: none;"
+  />
 </label>
+
+<!-- displays the picture uploaded from the native camera -->
+<img id="pictureFromCamera" [src]="imageUrl" *ngIf="imageUrl" />
+
 
 <!-- displays the picture uploaded from the native camera -->
 <img id="pictureFromCamera" [src]="imageUrl" *ngIf="imageUrl" />

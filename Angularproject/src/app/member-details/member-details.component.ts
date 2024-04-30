@@ -14,40 +14,29 @@ export class MemberDetailsComponent implements OnInit {
   userId: string = "";
 
   constructor(private usersService: UsersService, private route: ActivatedRoute, private router: Router) {
-    this.userId = this.route.snapshot.paramMap.get('id')!;
+    this.userId = this.route.snapshot.paramMap.get('Id')!;
     console.log(this.userId);
   }
   
- 
-   
-  
   ngOnInit(): void {
-    this.user = this.generateUserFakeData();
-    // this.getUserById();
+    this.getUserById();
+  
   }
 
-  getUserById() {
-    this.usersService.getUser(this.userId).subscribe((user) => {
-      console.log(user);
-      if(user) {
+  getUserById(): void {
+    this.usersService.getUser(this.userId).subscribe({
+      next: (user) => {
+        console.log(user);
         this.user = user;
+      },
+      error: (error) => {
+        console.log(error);
+        // Обробляйте помилку, якщо потрібно
       }
-    }, (error) => {
-      console.log(error);
-      this.user = this.generateUserFakeData();
     });
   }
 
-  private generateUserFakeData() {
-    let user: User = {
-     id:"userId",
-     firstName: "Шрекенко",  
-     userName: "Шрек",  
-     middleName: "Шрекович",  
-    };
 
-    return user;
-  }
 
 
   submitApplication():void{

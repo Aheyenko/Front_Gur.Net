@@ -1,16 +1,17 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
+  private apiUrl = 'https://localhost:5001/api/Students'; // URL вашого бекенду
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getUser(id: string) {
-    let url = "https://localhost:7053/api/users/" + id;
-    return this.http.get<User>(url);
+  getUser(userId: string): Observable<User> {
+    return this.http.get<User>(`${this.apiUrl}/${userId}`);
   }
 }
